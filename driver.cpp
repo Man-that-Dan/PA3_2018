@@ -8,6 +8,8 @@
 #include "filter/BlurFilter.h"
 #include "filter/HFlipFilter.h"
 #include "filter/VFlipFilter.h"
+#include "filter/BinaryFilter.h"
+#include "filter/SepiaFilter.h"
 
 
 using namespace std;

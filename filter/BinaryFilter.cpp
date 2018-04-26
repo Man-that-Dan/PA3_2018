@@ -28,13 +28,7 @@ BinaryFilter::~BinaryFilter() {}
 
 
 Pixel BinaryFilter::apply_transform(const Pixel& pix) const{
-  // Pixel a;
-  // Pixel b;
-
-  // const Pixel c = a;
-  // const Pixel d = b;
-  // this->color1 = c;
-  // this->color2 = d;
+  
   int lumin = pix.luminance();
   if(lumin > 255/2){
     return this->color1;
