@@ -26,7 +26,7 @@ void VFlipFilter::apply (Image& img) const{
   Image copy(img);
   int img_rows = img.header().height();
   int img_cols = img.header().width();
-  int rev_x;
+  int rev_y;
 
   //copy pixels into copy image in reverse along the y axis
   for (int y = 0; y < img_rows; y++) {
