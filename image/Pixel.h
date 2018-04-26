@@ -53,6 +53,8 @@ class Pixel {
 
     // Output operator
     friend ostream& operator<<(ostream&, const Pixel&);
+    //input operator
+    friend std::istream& operator >> (std::istream&, Pixel&);
 };
 
 #endif

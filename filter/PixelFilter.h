@@ -5,8 +5,8 @@
   TR 14:00
 
 */
-#ifndef SIMPLEFILTER_H
-#define SIMPLEFILTER_H
+#ifndef PIXELFILTER_H
+#define PIXELFILTER_H
 
 #include <string>
 #include <algorithm>
@@ -15,22 +15,20 @@
 
 using namespace std;
 
-class SimpleFilter : public Filter {
+class PixelFilter : public Filter {
   protected:
 
 
 
     // Derived classes need these visible
-    SimpleFilter();
-    SimpleFilter(string);
-    SimpleFilter(const Filter&);
-    using Matrix = vector<vector<double>>;
-
-
+    PixelFilter();
+    PixelFilter(string);
+    PixelFilter(const Filter&);
+    virtual Pixel apply_transform(const Pixel&);
 
   public:
     // Pure virtual destructor - Still needs definition!
-    virtual ~SimpleFilter () = 0;
+    virtual ~PixelFilter () = 0;
 
 
     // Public Interface - every derived class must implement

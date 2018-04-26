@@ -6,8 +6,8 @@
 
 */
 
-#ifndef BlurFILTER_H
-#define BlurFILTER_H
+#ifndef BLURFILTER_H
+#define BLURFILTER_H
 
 #include <string>
 #include <algorithm>
