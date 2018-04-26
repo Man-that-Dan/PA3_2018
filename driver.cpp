@@ -20,11 +20,11 @@ int main(int argc, char const *argv[]) {
 
 
   SharpenFilter Sharpenfil("Sharpen Filter");
-  SharpenFilter * Sharpenfilter = &Sharpenfil;
+  SharpenFilter * Sharpenfilt = &Sharpenfil;
   BlurFilter Blurfil("Blur Filter");
   BlurFilter * Blurfilt = &Blurfil;
   HFlipFilter Hflipfil("Horizontal Flip Filter");
-  HFLipFilter * HfLipfilt = &Hflipfil;
+  HFlipFilter * Hflipfilt = &Hflipfil;
   VFlipFilter Vflipfil("Vertical Flip Filter");
   VFlipFilter * Vflipfilt = &Vflipfil;
   Pixel col1 (100,100,100);
