@@ -39,11 +39,9 @@ void HFlipFilter::apply (Image& img) const{
   // copy reversed image into original image
   for (int y = 0; y < img_rows; y++) {
       for (int x = 0; x < img_cols; x++) {
-        cout << "Pixel: " << x << y << endl;
-        cout << static_cast<int>(img(x,y).r()) << endl;
-        cout << static_cast<int>(copy(x,y).r()) << endl;
+        
         img(x,y) = copy(x,y);
-        cout << static_cast<int>(img(x,y).r()) << endl;
+
       }
     }
 }
