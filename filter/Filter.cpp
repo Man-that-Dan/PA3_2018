@@ -25,3 +25,7 @@ int Filter::clamp (int lo, int hi, int x) {
 double Filter::clamp (double lo, double hi, double x) {
   return std::max(lo, std::min(x, hi));
 }
+
+void name(){
+  return this->name;
+};

@@ -26,16 +26,11 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   double red = pix.r();
   double blue = pix.b();
   double green = pix.g();
-  red = red/255.0;
-  blue = blue/255.0;
-  green = green/255.0;
-  cout << "post linearizing" << endl;
-  cout << red << " " << green << " " << blue << endl;
+
   red = Pixel::gamma_expansion(red);
   blue = Pixel::gamma_expansion(blue);
   green = Pixel::gamma_expansion(green);
-  cout << "post expansion" << endl;
-  cout << red << " " << green << " " << blue << endl;
+
   double outRed = ((red * 0.393) + (green * 0.769) + (blue * 0.189));
   double outGreen = ((red * 0.349) + (green * 0.686) + (blue * 0.168));
   double outBlue = ((red * 0.272) + (green * 0.534) + (blue * 0.131));
@@ -57,8 +52,9 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   red = red * 255;
   blue = blue * 255;
   green = green * 255;
-  cout << "post returning to color space" << endl;
-  cout << red << " " << green << " " << blue << endl;
+  red = this->clamp(0, 255, red);
+  blue = this->clamp(0, 255, blue);
+  green = this->clamp(0, 255, green);
   return Pixel(red, green, blue);
 
 };
