@@ -40,10 +40,10 @@ void HFlipFilter::apply (Image& img) const{
   for (int y = 0; y < img_rows; y++) {
       for (int x = 0; x < img_cols; x++) {
         cout << "Pixel: " << x << y << endl;
-        cout << img(x,y).r() << endl;
-        cout << copy(x,y).r() << endl;
+        cout << static_cast<int>(img(x,y).r()) << endl;
+        cout << static_cast<int>(copy(x,y).r()) << endl;
         img(x,y) = copy(x,y);
-        cout << img(x,y).r() << endl;
+        cout << static_cast<int>(img(x,y).r()) << endl;
       }
     }
 }
