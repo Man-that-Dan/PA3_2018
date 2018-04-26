@@ -19,8 +19,6 @@ using namespace std;
 class BinaryFilter : public PixelFilter {
   protected:
 
-    Pixel color1;
-    Pixel color2;
 
 
     virtual Pixel apply_transform(const Pixel&);
@@ -31,10 +29,12 @@ class BinaryFilter : public PixelFilter {
     BinaryFilter(const Filter&);
     ~BinaryFilter ();
 
+    Pixel color1;
+    Pixel color2;
 
     // Public Interface - every derived class must implement
     //                  - or be abstract itself
-    
+
 
 };
 
