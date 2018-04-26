@@ -14,8 +14,7 @@ BinaryFilter::BinaryFilter() :
 BinaryFilter::BinaryFilter(string name) :
   PixelFilter(name) {}
 
-BinaryFilter::BinaryFilter(string name) :
-    PixelFilter(name) {}
+
 
 BinaryFilter::BinaryFilter(const Filter& f) :
   PixelFilter(f)  {}

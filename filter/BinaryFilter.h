@@ -27,7 +27,6 @@ class BinaryFilter : public PixelFilter {
   public:
     BinaryFilter();
     BinaryFilter(string);
-    BinaryFilter(string, Pixel&, Pixel&);
     BinaryFilter(const Filter&);
     ~BinaryFilter ();
     void setcolors(Pixel&, Pixel&);
