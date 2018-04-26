@@ -28,7 +28,7 @@ int main(int argc, char const *argv[]) {
   BinaryFilter Binaryfilt("Binary Filter", col1, col2);
   SepiaFilter Sepiafilt("Sepia Filter");
   GrayscaleFilter Grayscalefilt("Grayscale Filter");
-  vector<Filter> menuopt;
+  vector<Filter*> menuopt;
   menuopt.resize(7);
   menuopt[0] = Sharpenfilt;
   menuopt[1] = Blurfilt;

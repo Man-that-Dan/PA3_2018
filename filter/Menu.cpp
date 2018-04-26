@@ -18,17 +18,17 @@ Menu::Menu(const Menu& f) :
 
 Menu::~Menu() {}
 
-Menu::Menu(vector<Filter> options) :
+Menu::Menu(vector<Filter*> options) :
   Options(options) {}
 
-Menu::Menu(string name, vector<Filter> options) :
+Menu::Menu(string name, vector<Filter*> options) :
   name(name), Options(options) {}
 
 void Menu::Display(){
   cout << "Enter a filename: " << endl;
   cin >> this->filename;
   for(int i = 0; i < this->Options.size(); i++){
-    cout << "Option: " << i << " " << Options[i].name << endl;
+    cout << "Option: " << i << " " << Options[i]->Name() << endl;
   };
   cout << endl;
   cout << "Enter numbers corresponding to filters you would like to apply. ";
@@ -60,7 +60,7 @@ void Menu::Choose(){
  cin >> c;
  int i;
  for(i = 0; i < choices.size(); i++){
-   if((Options[choices[i]].name()) == "Binary Filter"){
+   if((Options[choices[i]]->Name()) == "Binary Filter"){
      int r, g, b, r2, g2, b2;
      cout << " Enter six numbers for two pixels for Binary Filter" << endl;
      cout << " Numbers correspond to rgb values" << endl;
@@ -81,7 +81,7 @@ void Menu::Choose(){
    ofstream output("EC_1.ppm");
    Image inImg(input);
    for(i = 0; i < choices.size(); i++){
-     Options[choices[i]].apply(inImg);
+     Options[choices[i]]->apply(inImg);
    };
    inImg.write_to(output);
    input.close();
@@ -110,7 +110,7 @@ if(c == 2){
     outImgs[i] = Image(inImg);
   };
   for(i = 0; i < choices.size(); i++){
-    Options[choices[i]].apply(outImgs[i]);
+    Options[choices[i]]->apply(outImgs[i]);
     outImgs[i].write_to(outfiles[i]);
     outfiles[i].close();
   };

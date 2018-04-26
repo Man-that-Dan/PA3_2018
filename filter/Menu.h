@@ -26,7 +26,7 @@ class Menu {
   protected:
     // Data - Shows that abstract classes can still contain data
     string name;
-    vector<Filter> Options;
+    vector<Filter*> Options;
     string file;
 
     // Derived classes need these visible
@@ -35,15 +35,15 @@ class Menu {
   public:
     Menu();
     Menu(string);
-    Menu(vector<Filter>);
-    Menu(string, vector<Filter>);
+    Menu(vector<Filter*>);
+    Menu(string, vector<Filter*>);
     Menu(const Menu&);
     // Pure virtual destructor - Still needs definition!
-    ~Menu () = 0;
+    ~Menu ();
 
     void Display();
     void Choose();
-  
+
 
 };
 
