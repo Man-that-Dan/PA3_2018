@@ -24,8 +24,10 @@ Pixel BinaryFilter::apply_transform(const Pixel& pix) const{
   Pixel b;
   cout << "Enter RGB values for two pixels. Six numbers. Example: 120 45 200 100 100 100" << endl;
   cin >> a >> b;
-  this->color1 = a;
-  this->color2 = b;
+  const Pixel c = a;
+  const Pixel d = b;
+  this->color1 = c;
+  this->color2 = d;
   int lumin = pix.luminance();
   if(lumin > 255/2){
     return this->color1;
