@@ -33,7 +33,7 @@ class PixelFilter : public Filter {
 
     // Public Interface - every derived class must implement
     //                  - or be abstract itself
-    virtual void apply (Image&) const = 0;
+    virtual void apply (Image&) const;
 };
 
 #endif

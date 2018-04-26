@@ -41,7 +41,7 @@ if (!(input)) {
   return 1;
 }
 
-Image inImg(input);
+Image inImg1(input);
 Image inImg2(input);
 Image inImg3(input);
 Image inImg4(input);
@@ -54,13 +54,13 @@ BlurFilter Blurfilt;
 HFlipFilter Hflipfilt;
 VFlipFilter Vflipfilt;
 Pixel col1 (100,100,100);
-pixel col2 (0, 150, 0);
+Pixel col2 (0, 150, 0);
 BinaryFilter Binaryfilt("bob", col1, col2);
 SepiaFilter Sepiafilt;
 GrayscaleFilter Grayscalefilt;
 Sharpenfilt.apply(inImg1);
 Blurfilt.apply(inImg2);
-HFlipfilt.apply(inImg3);
+Hflipfilt.apply(inImg3);
 Vflipfilt.apply(inImg4);
 Binaryfilt.apply(inImg5);
 Sepiafilt.apply(inImg6);
