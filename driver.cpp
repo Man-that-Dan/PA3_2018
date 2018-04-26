@@ -46,8 +46,8 @@ if (!(input)) {
 //
 // Image inImg4(input);
 // Image inImg5(input);
-Image inImg6(input);
-// Image inImg7(input);
+// Image inImg6(input); bust
+Image inImg7(input);
 //
 SharpenFilter Sharpenfilt;
 BlurFilter Blurfilt;
@@ -64,16 +64,16 @@ GrayscaleFilter Grayscalefilt;
 //
 // Vflipfilt.apply(inImg4);
 // Binaryfilt.apply(inImg5);
-Sepiafilt.apply(inImg6);
-// Grayscalefilt.apply(inImg7);
+// Sepiafilt.apply(inImg6);
+Grayscalefilt.apply(inImg7);
 // inImg3.write_to(output3);
 // inImg1.write_to(output1);
 // inImg2.write_to(output2);
 //
 // inImg4.write_to(output4);
 // inImg5.write_to(output5);
-inImg6.write_to(output6);
-// inImg7.write_to(output7);
+// inImg6.write_to(output6);
+inImg7.write_to(output7);
 
 input.close();
 output1.close();
