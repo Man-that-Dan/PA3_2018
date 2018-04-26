@@ -42,7 +42,7 @@ if (!(input)) {
 }
 // Image inImg3(input);
 // Image inImg1(input);
-Image inImg2(input);
+// Image inImg2(input);
 //
 // Image inImg4(input);
 // Image inImg5(input);
@@ -60,18 +60,18 @@ SepiaFilter Sepiafilt;
 GrayscaleFilter Grayscalefilt;
 // Hflipfilt.apply(inImg3);
 // Sharpenfilt.apply(inImg1);
-Blurfilt.apply(inImg2);
+// Blurfilt.apply(inImg2);
 //
 // Vflipfilt.apply(inImg4);
-// Binaryfilt.apply(inImg5);
+Binaryfilt.apply(inImg5);
 // Sepiafilt.apply(inImg6);
 // Grayscalefilt.apply(inImg7);
 // inImg3.write_to(output3);
 // inImg1.write_to(output1);
-inImg2.write_to(output2);
+// inImg2.write_to(output2);
 //
 // inImg4.write_to(output4);
-// inImg5.write_to(output5);
+inImg5.write_to(output5);
 // inImg6.write_to(output6);
 // inImg7.write_to(output7);
 
