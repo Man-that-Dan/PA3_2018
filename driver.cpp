@@ -19,15 +19,22 @@ using namespace std;
 int main(int argc, char const *argv[]) {
 
 
-  SharpenFilter Sharpenfilt("Sharpen Filter");
-  BlurFilter Blurfilt("Blur Filter");
-  HFlipFilter Hflipfilt("Horizontal Flip Filter");
-  VFlipFilter Vflipfilt("Vertical Flip Filter");
+  SharpenFilter Sharpenfil("Sharpen Filter");
+  SharpenFilter * Sharpenfilter = &Sharpenfil;
+  BlurFilter Blurfil("Blur Filter");
+  BlurFilter * Blurfilt = &Blurfil;
+  HFlipFilter Hflipfil("Horizontal Flip Filter");
+  HFLipFilter * HfLipfilt = &Hflipfil;
+  VFlipFilter Vflipfil("Vertical Flip Filter");
+  VFlipFilter * Vflipfilt = &Vflipfil;
   Pixel col1 (100,100,100);
   Pixel col2 (0, 150, 0);
-  BinaryFilter Binaryfilt("Binary Filter", col1, col2);
-  SepiaFilter Sepiafilt("Sepia Filter");
-  GrayscaleFilter Grayscalefilt("Grayscale Filter");
+  BinaryFilter Binaryfil("Binary Filter", col1, col2);
+  BinaryFilter * Binaryfilt = &Binaryfil;
+  SepiaFilter Sepiafil("Sepia Filter");
+  SepiaFilter * Sepiafilt = &Sepiafil;
+  GrayscaleFilter Grayscalefil("Grayscale Filter");
+  GrayscaleFilter * Grayscalefilt = &Grayscalefil;
   vector<Filter*> menuopt;
   menuopt.resize(7);
   menuopt[0] = Sharpenfilt;
