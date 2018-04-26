@@ -24,7 +24,7 @@ class PixelFilter : public Filter {
     PixelFilter();
     PixelFilter(string);
     PixelFilter(const Filter&);
-    virtual Pixel apply_transform(const Pixel&);
+    virtual Pixel apply_transform(const Pixel&) const;
 
   public:
     // Pure virtual destructor - Still needs definition!

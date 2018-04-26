@@ -22,7 +22,7 @@ class BinaryFilter : public PixelFilter {
     Pixel color1;
     Pixel color2;
 
-    virtual Pixel apply_transform(const Pixel&);
+    virtual Pixel apply_transform(const Pixel&) const;
 
   public:
     BinaryFilter();
