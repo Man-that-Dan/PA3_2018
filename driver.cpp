@@ -40,10 +40,10 @@ if (!(input)) {
   std::cerr << "Could not open input/output\n";
   return 1;
 }
-
+Image inImg3(input);
 Image inImg1(input);
 Image inImg2(input);
-Image inImg3(input);
+
 Image inImg4(input);
 Image inImg5(input);
 Image inImg6(input);
@@ -58,16 +58,18 @@ Pixel col2 (0, 150, 0);
 BinaryFilter Binaryfilt("bob", col1, col2);
 SepiaFilter Sepiafilt;
 GrayscaleFilter Grayscalefilt;
+Hflipfilt.apply(inImg3);
 Sharpenfilt.apply(inImg1);
 Blurfilt.apply(inImg2);
-Hflipfilt.apply(inImg3);
+
 Vflipfilt.apply(inImg4);
 Binaryfilt.apply(inImg5);
 Sepiafilt.apply(inImg6);
 Grayscalefilt.apply(inImg7);
+inImg3.write_to(output3);
 inImg1.write_to(output1);
 inImg2.write_to(output2);
-inImg3.write_to(output3);
+
 inImg4.write_to(output4);
 inImg5.write_to(output5);
 inImg6.write_to(output6);
