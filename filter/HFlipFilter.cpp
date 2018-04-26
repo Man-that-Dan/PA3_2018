@@ -39,7 +39,7 @@ void HFlipFilter::apply (Image& img) const{
   // copy reversed image into original image
   for (int y = 0; y < img_rows; y++) {
       for (int x = 0; x < img_cols; x++) {
-        img(x,y) = copy(x,y);
+        img(x,y) = Pixel(50, 0, 0);
       }
     }
 }
