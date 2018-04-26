@@ -52,9 +52,9 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   red = red * 255;
   blue = blue * 255;
   green = green * 255;
-  red = this->clamp(0, 255, red);
-  blue = this->clamp(0, 255, blue);
-  green = this->clamp(0, 255, green);
+  red = this->clamp(0, 255, static_cast<int>red);
+  blue = this->clamp(0, 255, static_cast<int>blue);
+  green = this->clamp(0, 255, static_cast<int>green);
   return Pixel(red, green, blue);
 
 };
