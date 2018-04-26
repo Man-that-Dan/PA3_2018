@@ -54,6 +54,9 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   } else {
     blue = Pixel::inverse_gamma(outRed);
   };
+  red = red * 255;
+  blue = blue * 255;
+  green = green * 255;
   cout << "post returning to color space" << endl;
   cout << red << " " << green << " " << blue << endl;
   return Pixel(red, green, blue);
