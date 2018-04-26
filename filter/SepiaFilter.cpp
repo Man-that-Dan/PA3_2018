@@ -38,17 +38,17 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   if(outRed > 1.0){
     red = Pixel::inverse_gamma(1.0);
   } else {
-    red = Pixel::inverse_gamme(outRed);
+    red = Pixel::inverse_gamma(outRed);
   };
   if(outGreen > 1.0){
     green = Pixel::inverse_gamma(1.0);
   } else {
-    green = Pixel::inverse_gamme(outRed);
+    green = Pixel::inverse_gamma(outRed);
   };
   if(outBlue > 1.0){
     blue = Pixel::inverse_gamma(1.0);
   } else {
-    blue = Pixel::inverse_gamme(outRed);
+    blue = Pixel::inverse_gamma(outRed);
   };
   return Pixel(red, green, blue);
 
