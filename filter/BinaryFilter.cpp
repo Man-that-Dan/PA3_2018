@@ -22,7 +22,7 @@ BinaryFilter::BinaryFilter(const Filter& f) :
 BinaryFilter::~BinaryFilter() {}
 
 void BinaryFilter::setcolors(Pixel& pix1, Pixel& pix2){
-  this-color1 = pix1;
+  this->color1 = pix1;
   this->color2 = pix2;
 };
 
