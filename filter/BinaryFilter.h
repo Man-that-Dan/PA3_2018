@@ -30,7 +30,7 @@ class BinaryFilter : public PixelFilter {
     BinaryFilter(string, Pixel&, Pixel&);
     BinaryFilter(const Filter&);
     ~BinaryFilter ();
-
+    void setcolors(Pixel&, Pixel&);
 
 
     // Public Interface - every derived class must implement

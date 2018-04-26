@@ -14,16 +14,18 @@ BinaryFilter::BinaryFilter() :
 BinaryFilter::BinaryFilter(string name) :
   PixelFilter(name) {}
 
-BinaryFilter::BinaryFilter(string name, Pixel& pix1, Pixel& pix2) :
-    PixelFilter(name) {
-      this->color1 = pix1;
-      this->color2 = pix2;
-    }
+BinaryFilter::BinaryFilter(string name) :
+    PixelFilter(name) {}
 
 BinaryFilter::BinaryFilter(const Filter& f) :
   PixelFilter(f)  {}
 
 BinaryFilter::~BinaryFilter() {}
+
+void BinaryFilter::setcolors(Pixel& pix1, Pixel& pix2){
+  this-color1 = pix1;
+  this->color2 = pix2;
+};
 
 Pixel BinaryFilter::apply_transform(const Pixel& pix) const{
   // Pixel a;
