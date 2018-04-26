@@ -60,7 +60,7 @@ SepiaFilter Sepiafilt;
 GrayscaleFilter Grayscalefilt;
 // Hflipfilt.apply(inImg3);
 // Sharpenfilt.apply(inImg1);
-// Blurfilt.apply(inImg2);
+Blurfilt.apply(inImg2);
 //
 // Vflipfilt.apply(inImg4);
 // Binaryfilt.apply(inImg5);
