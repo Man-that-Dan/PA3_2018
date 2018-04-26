@@ -27,7 +27,7 @@ Menu::Menu(string name, vector<Filter*> options) :
 void Menu::Display(){
   cout << "Enter a filename: " << endl;
   cin >> this->filename;
-  for(int i = 0; i < this->Options.size(); i++){
+  for(int i = 0; i < this->static_cast<int>(Options.size()); i++){
     cout << "Option: " << i << " " << Options[i]->Name() << endl;
   };
   cout << endl;
@@ -45,9 +45,9 @@ void Menu::Choose(){
   while(c != -1){
     cin >> c;
     if(c != -1){
-      if(c >= Options.size()){
+      if(c >= static_cast<int>(Options.size()){
         cout << "Invalid choice." << endl;
-        exit();
+        exit(1);
       };
       choices.push_back(c);
     };
@@ -59,7 +59,7 @@ void Menu::Choose(){
  cout << "(note: I did this because I was unsure of the directions)" << endl;
  cin >> c;
  int i;
- for(i = 0; i < choices.size(); i++){
+ for(i = 0; i < static_cast<int>(choices.size()); i++){
    if((Options[choices[i]]->Name()) == "Binary Filter"){
      int r, g, b, r2, g2, b2;
      cout << " Enter six numbers for two pixels for Binary Filter" << endl;
@@ -68,7 +68,9 @@ void Menu::Choose(){
      cin >> r >> g >> b >> r2 >> g2 >> b2;
      Pixel Bin1(r, g, b);
      Pixel Bin2(r2, g2, b2);
-     Options[choices[i]] = BinaryFilter("Binary Filter", Bin1, Bin2);
+     BinaryFilter tempfilt("Binary Filter", Bin1, Bin2);
+     Filter * tempfiltptr = &tempfilt;
+     Options[choices[i]] = tempfiltptr;
    }
  };
  if(c == 1){
@@ -80,7 +82,7 @@ void Menu::Choose(){
 
    ofstream output("EC_1.ppm");
    Image inImg(input);
-   for(i = 0; i < choices.size(); i++){
+   for(i = 0; i < static_cast<int>(choices.size()); i++){
      Options[choices[i]]->apply(inImg);
    };
    inImg.write_to(output);
@@ -91,25 +93,25 @@ if(c == 2){
   ifstream input(this->filename);
   if (!(input)) {
     std::cerr << "Could not open input\n";
-    return 1;
+    exit(1);
   };
   vector<string> name;
   name.resize(choices.size());
-  for(i = 0; i < choices.size(); i++){
+  for(i = 0; i < static_cast<int>(choices.size()); i++){
     name[i] = "EC" + i + ".ppm";
   };
   vector<ofstream> outfiles;
   outfiles.resize(choices.size());
-  for(i = 0; i < choices.size(); i++){
+  for(i = 0; i < static_cast<int>(choices.size()); i++){
     outfiles[i].open(name[i]);
   };
   Image inImg(input);
   vector<Image> outImgs;
   outImgs.resize(choices.size());
-  for(i = 0; i < choices.size(); i++){
+  for(i = 0; i < static_cast<int>(choices.size()); i++){
     outImgs[i] = Image(inImg);
   };
-  for(i = 0; i < choices.size(); i++){
+  for(i = 0; i < static_cast<int>(choices.size()); i++){
     Options[choices[i]]->apply(outImgs[i]);
     outImgs[i].write_to(outfiles[i]);
     outfiles[i].close();

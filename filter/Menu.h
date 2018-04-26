@@ -27,7 +27,7 @@ class Menu {
     // Data - Shows that abstract classes can still contain data
     string name;
     vector<Filter*> Options;
-    string file;
+    string filename;
 
     // Derived classes need these visible
 
