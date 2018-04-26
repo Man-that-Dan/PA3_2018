@@ -32,22 +32,7 @@ ostream& operator<< (ostream& out, const Pixel& P) {
                     << (int)P.B << ")";
 }
 
-//input
-std::istream& operator>> (std::istream& in, Pixel& P) {
- int valR, valG, valB;
- in >> valR;
- in >> valG;
- in >> valB;
 
- P.R = static_cast<int>(valR);
-
- P.G = static_cast<int>(valG);
-
- P.B = static_cast<int>(valB);
-
- return in;
-
-} 
 
 // Assignment
 Pixel& Pixel::operator= (const Pixel& rhs) {
