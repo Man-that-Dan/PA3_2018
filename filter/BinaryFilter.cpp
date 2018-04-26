@@ -14,6 +14,9 @@ BinaryFilter::BinaryFilter() :
 BinaryFilter::BinaryFilter(string name) :
   PixelFilter(name) {}
 
+BinaryFilter::BinaryFilter(string name, Pixel& pix1, Pixel& pix2) :
+    color1(pix1), color2(pix2), PixelFilter(name) {}
+
 BinaryFilter::BinaryFilter(const Filter& f) :
   PixelFilter(f)  {}
 
@@ -22,8 +25,7 @@ BinaryFilter::~BinaryFilter() {}
 Pixel BinaryFilter::apply_transform(const Pixel& pix) const{
   // Pixel a;
   // Pixel b;
-  cout << "Enter RGB values for two pixels. Six numbers. Example: 120 45 200 100 100 100" << endl;
-  cin >> this->color1 >> this->color2;
+
   // const Pixel c = a;
   // const Pixel d = b;
   // this->color1 = c;
