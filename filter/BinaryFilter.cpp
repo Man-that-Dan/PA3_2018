@@ -19,7 +19,7 @@ BinaryFilter::BinaryFilter(const Filter& f) :
 
 BinaryFilter::~BinaryFilter() {}
 
-Pixel apply_transform(const Pixel& pix){
+Pixel BinaryFilter::apply_transform(const Pixel& pix){
   Pixel a;
   Pixel b;
   cout << "Enter RGB values for two pixels. Six numbers. Example: 120 45 200 100 100 100" << endl;
