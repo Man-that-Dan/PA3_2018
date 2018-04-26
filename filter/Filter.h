@@ -31,7 +31,7 @@ class Filter {
     // Static helpers - should be a template
     static int clamp (int lo, int hi, int x);
     static double clamp (double lo, double hi, double x);
-    void Name();
+    string Name();
     // Public Interface - every derived class must implement
     //                  - or be abstract itself
     virtual void apply (Image&) const = 0;
