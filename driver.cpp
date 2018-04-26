@@ -45,7 +45,7 @@ if (!(input)) {
 // Image inImg2(input);
 //
 // Image inImg4(input);
-// Image inImg5(input);
+Image inImg5(input);
 // Image inImg6(input);
 // Image inImg7(input);
 //
