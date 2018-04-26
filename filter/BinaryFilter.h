@@ -27,6 +27,7 @@ class BinaryFilter : public PixelFilter {
   public:
     BinaryFilter();
     BinaryFilter(string);
+    BinaryFilter::BinaryFilter(string name, Pixel& pix1, Pixel& pix2);
     BinaryFilter(const Filter&);
     ~BinaryFilter ();
 
