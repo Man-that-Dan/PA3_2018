@@ -6,8 +6,8 @@
 
 */
 
-#ifndef HFLIPFILTER_H
-#define HFLIPFILTER_H
+#ifndef VFLIPFILTER_H
+#define VFLIPFILTER_H
 
 #include <string>
 #include <algorithm>
@@ -16,7 +16,7 @@
 
 using namespace std;
 
-class HFlipFilter : public SimpleFilter {
+class VFlipFilter : public SimpleFilter {
   protected:
 
 
@@ -25,10 +25,10 @@ class HFlipFilter : public SimpleFilter {
 
 
   public:
-    HFlipFilter();
-    HFlipFilter(string);
-    HFlipFilter(const Filter&);
-    ~HFlipFilter ();
+    VFlipFilter();
+    VFlipFilter(string);
+    VFlipFilter(const Filter&);
+    ~VFlipFilter ();
 
 
     // Public Interface - every derived class must implement

@@ -6,6 +6,8 @@
 #include "image/Image.h"
 #include "filter/SharpenFilter.h"
 #include "filter/BlurFilter.h"
+#include "filter/HFlipFilter.h"
+#include "filter/VFlipFilter.h"
 
 
 using namespace std;

@@ -25,8 +25,8 @@ class SimpleFilter : public Filter {
     SimpleFilter(string);
     SimpleFilter(const Filter&);
     using Matrix = vector<vector<double>>;
-    virtual void apply(Image&, const Matrix&) const;
     
+
 
   public:
     // Pure virtual destructor - Still needs definition!

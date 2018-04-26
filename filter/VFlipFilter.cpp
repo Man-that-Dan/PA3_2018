@@ -5,34 +5,34 @@
   TR 14:00
 
 */
-#include "HFlipFilter.h"
+#include "VFlipFilter.h"
 
 
-HFlipFilter::HFlipFilter() :
+VFlipFilter::VFlipFilter() :
   SimpleFilter("") {}
 
-HFlipFilter::HFlipFilter(string name) :
+VFlipFilter::VFlipFilter(string name) :
   SimpleFilter(name) {}
 
-HFlipFilter::HFlipFilter(const Filter& f) :
+VFlipFilter::VFlipFilter(const Filter& f) :
   SimpleFilter(f)  {}
 
-HFlipFilter::~HFlipFilter() {}
+VFlipFilter::~VFlipFilter() {}
 
 
 // Flips image horizontally
-void HFlipFilter::apply (Image& img) const{
+void VFlipFilter::apply (Image& img) const{
   //create image to fill in reverse
   Image copy(img);
   int img_rows = img.header().height();
   int img_cols = img.header().width();
   int rev_x;
 
-  //copy pixels into copy image in reverse along the x axis
+  //copy pixels into copy image in reverse along the y axis
   for (int y = 0; y < img_rows; y++) {
       for (int x = 0; x < img_cols; x++) {
-        rev_x = img_cols - x;
-        copy(x,y) = img(rev_x, y);
+        rev_y = img_rows - y;
+        copy(x,y) = img(x, rev_y);
       }
     }
 
