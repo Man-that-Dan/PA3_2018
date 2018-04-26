@@ -27,7 +27,7 @@ Menu::Menu(string name, vector<Filter*> options) :
 void Menu::Display(){
   cout << "Enter a filename: " << endl;
   cin >> this->filename;
-  for(int i = 0; i < this->static_cast<int>(Options.size()); i++){
+  for(int i = 0; i < static_cast<int>(this->Options.size()); i++){
     cout << "Option: " << i << " " << Options[i]->Name() << endl;
   };
   cout << endl;
@@ -45,7 +45,7 @@ void Menu::Choose(){
   while(c != -1){
     cin >> c;
     if(c != -1){
-      if(c >= static_cast<int>(Options.size()){
+      if(c >= static_cast<int>(Options.size())){
         cout << "Invalid choice." << endl;
         exit(1);
       };
@@ -77,7 +77,7 @@ void Menu::Choose(){
    ifstream input(this->filename);
    if (!(input)) {
      std::cerr << "Could not open input\n";
-     return 1;
+     exit(1);
    };
 
    ofstream output("EC_1.ppm");
