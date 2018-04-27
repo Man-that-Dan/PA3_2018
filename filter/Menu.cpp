@@ -62,6 +62,7 @@ void Menu::Choose(){
  cout << "(note: I did this because I was unsure of the directions)" << endl;
  cin >> c;
  int i;
+ int free_it = 0;
  for(i = 0; i < static_cast<int>(choices.size()); i++){
    if((Options[choices[i]]->Name()) == "Binary Filter"){
      int r, g, b, r2, g2, b2;
@@ -72,8 +73,9 @@ void Menu::Choose(){
      Pixel Bin1(r, g, b);
      Pixel Bin2(r2, g2, b2);
     //  BinaryFilter tempfilt("Binary Filter", Bin1, Bin2);
-    //  Filter * tempfiltptr = &tempfilt;
-    //  Options[choices[i]] = tempfiltptr;
+
+     Options[choices[i]] = new BinaryFilter("Binary Filter", Bin1, Bin2);
+     free_it = 1;
    }
  };
  if(c == 1){
@@ -122,5 +124,10 @@ if(c == 2){
     outfiles[i].close();
   };
   input.close();
+};
+for(i = 0; i < static_cast<int>(choices.size()); i++){
+  if((Options[choices[i]]->Name()) == "Binary Filter" && free_it == 1){
+    delete Options[choices[i]];
+  };
 };
 };
