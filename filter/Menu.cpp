@@ -103,7 +103,7 @@ if(c == 2){
   for(i = 0; i < static_cast<int>(choices.size()); i++){
     string tmp = "";
     char numr;
-    tmp += itoa(i, numr, 10);
+    tmp = to_string(i);
 
     name[i] = string("EC") + tmp + string(".ppm");
   };
