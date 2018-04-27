@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "VFlipFilter.h"
 
@@ -20,9 +19,9 @@ VFlipFilter::VFlipFilter(const Filter& f) :
 VFlipFilter::~VFlipFilter() {}
 
 
-// Flips image horizontally
+// Flips image veritcally
 void VFlipFilter::apply (Image& img) const{
-  //create image to fill in reverse
+  //create image to fill in reverse along y axis
   Image copy(img);
   int img_rows = img.header().height();
   int img_cols = img.header().width();

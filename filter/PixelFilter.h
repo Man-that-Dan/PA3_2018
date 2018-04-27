@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #ifndef PIXELFILTER_H
 #define PIXELFILTER_H
@@ -27,12 +26,10 @@ class PixelFilter : public Filter {
     virtual Pixel apply_transform(const Pixel&) const = 0;;
 
   public:
-    // Pure virtual destructor - Still needs definition!
+
     virtual ~PixelFilter () = 0;
 
-
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
+    // this apply is not pure virtual, child classes use this
     virtual void apply (Image&) const;
 };
 

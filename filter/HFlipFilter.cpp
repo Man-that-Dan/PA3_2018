@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "HFlipFilter.h"
 
@@ -22,7 +21,7 @@ HFlipFilter::~HFlipFilter() {}
 
 // Flips image horizontally
 void HFlipFilter::apply (Image& img) const{
-  //create image to fill in reverse
+  //create image to fill in reverse along x axis
   Image copy(img);
   int img_rows = img.header().height();
   int img_cols = img.header().width();
@@ -39,7 +38,7 @@ void HFlipFilter::apply (Image& img) const{
   // copy reversed image into original image
   for (int y = 0; y < img_rows; y++) {
       for (int x = 0; x < img_cols; x++) {
-        
+
         img(x,y) = copy(x,y);
 
       }

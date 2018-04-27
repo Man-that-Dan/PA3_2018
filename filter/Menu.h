@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #ifndef MENU_H
 #define MENU_H
@@ -25,12 +24,12 @@ using namespace std;
 
 class Menu {
   protected:
-    // Data - Shows that abstract classes can still contain data
-    string name;
-    vector<Filter*> Options;
-    string filename;
 
-    // Derived classes need these visible
+    string name;
+    //list of filters
+    vector<Filter*> Options;
+    //input filename
+    string filename;
 
 
   public:

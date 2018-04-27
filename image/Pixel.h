@@ -1,3 +1,10 @@
+/*
+  Daniel Toro
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
+*/
+
 #ifndef PIXEL_H
 #define PIXEL_H 1
 
@@ -53,7 +60,7 @@ class Pixel {
 
     // Output operator
     friend ostream& operator<<(ostream&, const Pixel&);
-    
+
 };
 
 #endif

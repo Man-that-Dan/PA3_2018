@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef BINARYFILTER_H
@@ -19,9 +18,11 @@ using namespace std;
 class BinaryFilter : public PixelFilter {
   protected:
 
+    // two colors to be used
     Pixel color1;
     Pixel color2;
 
+    //transform function
     virtual Pixel apply_transform(const Pixel&) const;
 
   public:
@@ -30,11 +31,8 @@ class BinaryFilter : public PixelFilter {
     BinaryFilter(const Filter&);
     BinaryFilter(string name, Pixel& pix1, Pixel& pix2);
     ~BinaryFilter ();
-    
 
 
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
 
 
 };

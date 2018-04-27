@@ -1,3 +1,10 @@
+/*
+  Daniel Toro
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
+*/
+
 #include "Pixel.h"
 
 Pixel::Pixel () : R(0), G(0), B(0) {}

@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #ifndef SIMPLEFILTER_H
 #define SIMPLEFILTER_H
@@ -18,13 +17,10 @@ using namespace std;
 class SimpleFilter : public Filter {
   protected:
 
-
-
-    // Derived classes need these visible
     SimpleFilter();
     SimpleFilter(string);
     SimpleFilter(const Filter&);
-    using Matrix = vector<vector<double>>;
+  
 
 
 
@@ -33,7 +29,7 @@ class SimpleFilter : public Filter {
     virtual ~SimpleFilter () = 0;
 
 
-    // Public Interface - every derived class must implement
+    // Pure virtual- every derived class must implement
     //                  - or be abstract itself
     virtual void apply (Image&) const = 0;
 };

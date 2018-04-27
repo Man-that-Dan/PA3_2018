@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef SHARPENFILTER_H
@@ -19,10 +18,7 @@ using namespace std;
 class SharpenFilter : public KernelFilter {
   protected:
 
-
-
-    // Derived classes need these visible
-    
+    // defines matrix keyword and own static matrix
     using Matrix = vector<vector<double>>;
     static Matrix K3;
 
@@ -32,9 +28,6 @@ class SharpenFilter : public KernelFilter {
     SharpenFilter(const Filter&);
     ~SharpenFilter ();
 
-
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
     virtual void apply (Image&) const;
 };
 

@@ -1,3 +1,10 @@
+/*
+  Daniel Toro
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
+*/
+
 #include "Image.h"
 
 Image::Image (ifstream& in) :

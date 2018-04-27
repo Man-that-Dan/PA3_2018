@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "PixelFilter.h"
 
@@ -19,15 +18,16 @@ PixelFilter::PixelFilter(const Filter& f) :
 PixelFilter::~PixelFilter() {}
 
 void PixelFilter::apply(Image& img) const {
-  
+
   int img_rows = img.header().height();
   int img_cols = img.header().width();
 
   // Make reference image
   Image copy(img);
 
-  // Apply kernel to each pixel
-  // Omit outer edges. Simplest solution
+  // Apply a transform to each pixel
+  // actual transform is pure virtual
+  // each child class will implement its own transform
   for (int y = 0; y < img_rows; y++) {
     for (int x = 0; x < img_cols; x++) {
       img(x,y) = this->apply_transform(copy(x, y));

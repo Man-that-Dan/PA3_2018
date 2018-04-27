@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #ifndef FILTER_H
 #define FILTER_H
@@ -31,6 +30,7 @@ class Filter {
     // Static helpers - should be a template
     static int clamp (int lo, int hi, int x);
     static double clamp (double lo, double hi, double x);
+    //Getter for filter's name, implemented mainly for menu class
     string Name();
     // Public Interface - every derived class must implement
     //                  - or be abstract itself

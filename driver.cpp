@@ -1,3 +1,10 @@
+/*
+  Daniel Toro
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
+*/
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -18,7 +25,7 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
 
-
+  //create filters, assign names, and create pointers for filter vector
   SharpenFilter Sharpenfil("Sharpen Filter");
   SharpenFilter * Sharpenfilt = &Sharpenfil;
   BlurFilter Blurfil("Blur Filter");
@@ -27,6 +34,7 @@ int main(int argc, char const *argv[]) {
   HFlipFilter * Hflipfilt = &Hflipfil;
   VFlipFilter Vflipfil("Vertical Flip Filter");
   VFlipFilter * Vflipfilt = &Vflipfil;
+  //default values I chose for inital binary filter state. Arbitrary.
   Pixel col1 (100,100,100);
   Pixel col2 (0, 150, 0);
   BinaryFilter Binaryfil("Binary Filter", col1, col2);
@@ -35,6 +43,8 @@ int main(int argc, char const *argv[]) {
   SepiaFilter * Sepiafilt = &Sepiafil;
   GrayscaleFilter Grayscalefil("Grayscale Filter");
   GrayscaleFilter * Grayscalefilt = &Grayscalefil;
+
+  //create list for menu object
   vector<Filter*> menuopt;
   menuopt.resize(7);
   menuopt[0] = Sharpenfilt;
@@ -44,7 +54,12 @@ int main(int argc, char const *argv[]) {
   menuopt[4] = Binaryfilt;
   menuopt[5] = Sepiafilt;
   menuopt[6] = Grayscalefilt;
+
+  //create filter menu object
   Menu FiltMenu("Filter menu", menuopt);
+  //Run options and apply them
+  //Asks user for input file
+  //also automatically closes files.
   FiltMenu.Choose();
 
 

@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "SepiaFilter.h"
 
@@ -21,7 +20,9 @@ SepiaFilter::SepiaFilter(const Filter& f) :
 SepiaFilter::~SepiaFilter() {}
 
 
-
+//Version 2 algorithm
+// uses gamma expansion and inverse gamma functions to
+// convert pixel to sepia then return new pixel
 Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   double red = pix.r();
   double blue = pix.b();
@@ -49,15 +50,16 @@ Pixel SepiaFilter::apply_transform(const Pixel& pix) const{
   } else {
     blue = Pixel::inverse_gamma(outRed);
   };
+
+  //convert back to color space
   red = red * 255;
   blue = blue * 255;
   green = green * 255;
-  // red = this->clamp(0, 255, static_cast<int>(red));
-  // blue = this->clamp(0, 255, static_cast<int>(blue));
-  // green = this->clamp(0, 255, static_cast<int>(green));
+  //clamp back to an acceptable pixel value
   red = this->clamp(0.0, 255.0, red);
   blue = this->clamp(0.0, 255.0, blue);
   green = this->clamp(0.0, 255.0, green);
+  
   return Pixel(red, green, blue);
 
 };

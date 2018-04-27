@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "SharpenFilter.h"
 
@@ -21,12 +20,13 @@ SharpenFilter::~SharpenFilter() {}
 
 using Matrix = vector<vector<double>>;
 
+//sharpening matrix
 Matrix SharpenFilter::K3 =
 {{ 0,-1, 0},
  {-1, 5,-1},
  { 0,-1, 0}};
 
-
+//apply function uses parent class' apply function with own matrix
 void SharpenFilter::apply (Image& img) const{
 	KernelFilter::apply(img, this->K3);
 }

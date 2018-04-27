@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 #include "KernelFilter.h"
 
@@ -19,7 +18,7 @@ KernelFilter::KernelFilter(const Filter& f) :
 KernelFilter::~KernelFilter() {}
 
 
-
+//applies kernel to an image using a provided matrix
 void KernelFilter::apply(Image& img, const Matrix& k) const {
   int k_center = k.size()/2;
   int img_rows = img.header().height();

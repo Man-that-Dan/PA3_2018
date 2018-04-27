@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef VFLIPFILTER_H
@@ -19,11 +18,6 @@ using namespace std;
 class VFlipFilter : public SimpleFilter {
   protected:
 
-
-
-    // Derived classes need these visible
-
-
   public:
     VFlipFilter();
     VFlipFilter(string);
@@ -31,8 +25,6 @@ class VFlipFilter : public SimpleFilter {
     ~VFlipFilter ();
 
 
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
     virtual void apply (Image&) const;
 };
 

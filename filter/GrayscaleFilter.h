@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef GRAYSCALEFILTER_H
@@ -18,7 +17,7 @@ using namespace std;
 
 class GrayscaleFilter : public PixelFilter {
   protected:
-
+    //grays a pixel based on luminance
     virtual Pixel apply_transform(const Pixel&) const;
 
   public:
@@ -28,9 +27,6 @@ class GrayscaleFilter : public PixelFilter {
     ~GrayscaleFilter ();
 
 
-
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
 
 
 };

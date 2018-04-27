@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef HFLIPFILTER_H
@@ -20,19 +19,13 @@ class HFlipFilter : public SimpleFilter {
   protected:
 
 
-
-    // Derived classes need these visible
-
-
   public:
     HFlipFilter();
     HFlipFilter(string);
     HFlipFilter(const Filter&);
     ~HFlipFilter ();
 
-
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
+    //virtual apply function inhereted from parent
     virtual void apply (Image&) const;
 };
 

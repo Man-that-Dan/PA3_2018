@@ -1,9 +1,8 @@
 /*
   Daniel Toro
-  lab10
-  CPSC 1021
-  TR 14:00
-
+  PA3 - CPSC 1020 2018
+  MWF 11:15
+  dtoro@g.clemson.edu
 */
 
 #ifndef BLURFILTER_H
@@ -19,10 +18,7 @@ using namespace std;
 class BlurFilter : public KernelFilter {
   protected:
 
-
-
-    // Derived classes need these visible
-
+    //matrix similar to sharpen filter 
     using Matrix = vector<vector<double>>;
     static Matrix K3;
 
@@ -33,8 +29,6 @@ class BlurFilter : public KernelFilter {
     ~BlurFilter ();
 
 
-    // Public Interface - every derived class must implement
-    //                  - or be abstract itself
     virtual void apply (Image&) const;
 };
 
