@@ -98,7 +98,11 @@ if(c == 2){
   vector<string> name;
   name.resize(choices.size());
   for(i = 0; i < static_cast<int>(choices.size()); i++){
-    name[i] = string("EC") + string(i) + string(".ppm");
+    string tmp = "";
+    char numr;
+    tmp += itoa(i, numr, 10);
+
+    name[i] = string("EC") + tmp + string(".ppm");
   };
   vector<ofstream> outfiles;
   outfiles.resize(choices.size());
