@@ -45,7 +45,6 @@ int main(int argc, char const *argv[]) {
   menuopt[5] = Sepiafilt;
   menuopt[6] = Grayscalefilt;
   Menu FiltMenu("Filter menu", menuopt);
-  FiltMenu.Display();
   FiltMenu.Choose();
 
 

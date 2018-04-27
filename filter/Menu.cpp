@@ -28,7 +28,7 @@ Menu::Menu(string name, vector<Filter*> options) :
   name(name), Options(options) {}
 
 void Menu::Display(){
-  cout << "Enter a filename: " << endl;
+  cout << "Enter an input filename: " << endl;
   cin >> this->filename;
   for(int i = 0; i < static_cast<int>(this->Options.size()); i++){
     cout << "Option: " << i << " " << Options[i]->Name() << endl;
