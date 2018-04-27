@@ -98,7 +98,7 @@ if(c == 2){
   vector<string> name;
   name.resize(choices.size());
   for(i = 0; i < static_cast<int>(choices.size()); i++){
-    name[i] = "EC" + i + ".ppm";
+    name[i] = string("EC") + i + string(".ppm");
   };
   vector<ofstream> outfiles;
   outfiles.resize(choices.size());
@@ -107,9 +107,8 @@ if(c == 2){
   };
   Image inImg(input);
   vector<Image> outImgs;
-  outImgs.resize(choices.size());
   for(i = 0; i < static_cast<int>(choices.size()); i++){
-    outImgs[i] = Image(inImg);
+      outImgs.push_back(Image(inImg));
   };
   for(i = 0; i < static_cast<int>(choices.size()); i++){
     Options[choices[i]]->apply(outImgs[i]);
