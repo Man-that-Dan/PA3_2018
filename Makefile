@@ -1,5 +1,5 @@
 # ******************************************************** #
-#	General Purpose C/C++ Makefile
+#	PA3 Makefile
 # ******************************************************** #
 
 # Output Config
@@ -35,4 +35,4 @@ clean:
 	rm -rf $(OBJDIR)
 
 run:
-	./$(TARGET) doggo.ppm sharpened_pupper.ppm
+	./$(TARGET)
