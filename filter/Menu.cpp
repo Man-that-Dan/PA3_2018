@@ -68,11 +68,11 @@ void Menu::Choose(){
      cout << " Enter six numbers for two pixels for Binary Filter" << endl;
      cout << " Numbers correspond to rgb values" << endl;
      cout << "Example: 200 155 103 11 45 100" << endl;
-    //  cin >> r >> g >> b >> r2 >> g2 >> b2;
-    //  Pixel Bin1(r, g, b);
-    //  Pixel Bin2(r2, g2, b2);
-    //  BinaryFilter tempfilt("Binary Filter", Bin1, Bin2);
-    //  Filter * tempfiltptr = &tempfilt;
+     cin >> r >> g >> b >> r2 >> g2 >> b2;
+     Pixel Bin1(r, g, b);
+     Pixel Bin2(r2, g2, b2);
+     BinaryFilter tempfilt("Binary Filter", Bin1, Bin2);
+     Filter * tempfiltptr = &tempfilt;
     //  Options[choices[i]] = tempfiltptr;
    }
  };
