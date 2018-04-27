@@ -8,7 +8,7 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <cstdlib>;
+#include <cstdlib>
 #include <string>
 #include <algorithm>
 #include "../image/Image.h"
